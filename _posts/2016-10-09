@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Testacular: Week 7 of OOP"
+---
+
+## What did I do this past week?
+Well this week was fun. Even though I’m still not doing great on the quizzes, I think I did okay on the test. Without revealing too much, I’ll just say that I’m glad I studied what I did. After finishing up our story of cached literals and constructors for the week, we had an exam on Thursday that, while starting late, was over before too long. The late start actually calmed me down slightly, since eventually I really just wanted to get it over with (like that time when the power surged momentarily during my GRE exam). In any case, the exam is over now, and that’s a good thing.
+
+# What's in my way?
+I’ve been pretty satisfied with the way the class has been going lately. One minor complaint is that we went over material a day before the test that was expected to appear on the exam, and I find that a little unfair. Most other classes I’m taking have a cutoff point well before the exam date to give students ample time to prepare. In the future I think it would be prudent to allow for more time between the ‘cutoff lecture’ and the exam.
+
+# What will I do next week?
+Thankfully, to keep us from getting bored, a new project is out this week. I’m actually going to partner with someone for this one; the last project was due amidst a sea of other obligations that made it nigh impossible to work with another person’s schedule in addition to my own. This time, I expect I’ll be able to reap the benefits of pair programming while not feeling unimaginably stressed.
+
+## Tip of the week
+It’s a little late for this considering the exam is over, but there’s a neat way to optimize the swap algorithm, or any place you need to swap two values. We’re all familiar with the exclusive-or operation, `^` in C-like languages. But did you know you can use it as a way to mask two values into the same memory location? A practical demonstration is in order for the uninitiated (many of us saw this in our data structures course, especially if you took Dr. Novak):
+
+```c
+//swap a with b
+int tmp = a ^ b;
+a = tmp ^ a;
+b = tmp ^ b;
+```
+Caution: if `a` and `b` occupy the same address in memory, the algorithm will fail. 
